@@ -19,12 +19,6 @@ function  void build_phase(uvm_phase phase) ;
 super.build_phase(phase);
 `uvm_info("router_tb", "buildphase completed" , UVM_HIGH )
 
-//setting the variables
-uvm_config_int::set(this, "ch0", "channel_id",0); 
-uvm_config_int::set(this, "ch1", "channel_id", 1); 
-uvm_config_int::set(this, "ch2", "channel_id", 2); 
-uvm_config_int::set(this, "hbus", "num_masters", 1); 
-uvm_config_int::set(this, "hbus", "num_slaves" , 0); 
 
 
 //constracting the UVCs
@@ -38,6 +32,12 @@ mc_seqr = mc_sequencer::type_id::create("mc_seqr" ,this);
 sbd = router_scoreboard::type_id::create("sbd", this);
 
 
+//setting the variables
+uvm_config_int::set(this, "ch0", "channel_id",0); 
+uvm_config_int::set(this, "ch1", "channel_id", 1); 
+uvm_config_int::set(this, "ch2", "channel_id", 2); 
+uvm_config_int::set(this, "hbus", "num_masters", 1); 
+uvm_config_int::set(this, "hbus", "num_slaves" , 0); 
 
 endfunction:build_phase
 

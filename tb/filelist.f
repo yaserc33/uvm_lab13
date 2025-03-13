@@ -15,15 +15,11 @@
 ../clock_and_reset/sv/clock_and_reset_pkg.sv
 
 
-
 +incdir+../router_rtl   
 ../router_rtl/yapp_router.sv 
 ../router_rtl/clkgen.sv
 ../router_rtl/hw_top_dut.sv
+tb_top.sv            # compile top level module 
 
-
-
-
-top.sv            # compile top level module 
-
++timescale+1ns/1ns
 
